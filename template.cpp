@@ -31,8 +31,8 @@ int sub(int a,int b,int M){
 int mult(int a,int b,int M){
    return (a*b)%M; 
    }
-// int d, x, y;//initialise if using extended Euclid
-void extendedEuclid(lli A, lli B) {
+int d, x, y;//initialise if using extended Euclid
+void extendedEuclid(int  A, int  B) {
     if(B == 0){d = A;x = 1;y = 0;
     }
 else{
@@ -48,11 +48,11 @@ int find(int a,vector<int> &par){
 	if(a==par[a]){
 		return a;
 	}
-	return a=find(par[a]);
+	return a=find(par[a],par);
 }
 int uni(int a,int b,vector<int> &par){
-	a=find(a);
-	b=find(b);
+	a=find(a,par);
+	b=find(b,par);
 	if(a!=b){
 		par[a]=b;
 	}
@@ -67,8 +67,11 @@ int isSub(string &a,string &b){
 signed main(){
    int t=1;
    cin>>t;
+   int ans=0;
    while(t--){
-   
+
+    
+    
    }
 }
    
